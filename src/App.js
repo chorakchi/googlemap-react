@@ -6,14 +6,17 @@ const mapStyles = {
   height: '100%'
 };
 
-function App({...props}) {
+function App({ ...props }) {
   return (
     <div>
-<Map
+      <Map
         google={props.google}
         zoom={14}
         style={mapStyles}
-
+        initialCenter={{
+          lat: 52.5200,
+          lng: 13.4050
+        }}
       />
     </div>
   );
